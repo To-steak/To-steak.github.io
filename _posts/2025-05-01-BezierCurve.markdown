@@ -67,7 +67,7 @@ public static Vector3 Evaluate(Vector3[] controlPoints, float t)
 
 정점 4개를 사용해서 곡선 그리기:
 
-![BezierCurve](/images/BezierCurve.png)
+![BezierCurve](/images/BezierCurve/BezierCurve.png)
 
 위 사진은 흰 색 Cube가 곡선을 결정하는 Vertex이다. 빨간 공이 t 값이 0 ~ 1로 변화하면서 빨간 공의 궤적이 곡선을 그리게 되는 것이다.
 
@@ -103,11 +103,11 @@ private static Vector3 Sum(Vector3[] patch, Vector4 u, Vector4 v)
 ```
 위에서 곡면에 t값에 따른 대한 u, v 값을 계산했다면 그 가중치에 맞게 합한다.
 
-![BezierSurface](/images/BezierSurface.png)
+![BezierSurface](/images/BezierCurve/BezierSurface.png)
 
 위 그림은 여러 개의 Bezier Curve가 격자 형태로 연결되어
 하나의 Bezier Surface를 이루는 모습을 보여준다.
 
 유니티 프로젝트는 [여기][bezier-gh]에서 확인할 수 있습니다.
 
-[bezier-gh]:   https://github.com/To-steak/Bezier_Curve
+[bezier-gh]: https://github.com/To-steak/Bezier_Curve
