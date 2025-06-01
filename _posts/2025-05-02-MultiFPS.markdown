@@ -1,0 +1,15 @@
+---
+layout: single
+title:  "Photon을 이용한 멀티 FPS"
+date:   2025-05-29 22:48:12 +0900
+categories: [Unity, Photon Engine]
+---
+Photon Engine을 이용한 멀티 게임
+
+23년 여름방학 동안 혼자서 작업한 결과물입니다.
+
+TPS 장르로 입력 처리와 카메라 동작 및 애니메이션 처리에 대해 더 배우고자 했습니다.
+
+![ClassDiagram](/images/PhotonFPS/Photon_FPS_ClassDiagram.png)
+
+[fps-gh]: https://github.com/To-steak/FPS
