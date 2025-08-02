@@ -7,7 +7,6 @@ categories: [Unity]
 
 - 프로젝트 명: Monster Hunter
 - 개발 기간: 2023 학년도 2학기 기말 프로젝트 (약 3주)
-- 플랫폼 및 장르: Windows용 Top View 액션 게임 (싱글 플레이)
 
 # 게임 조작
 - WASD로 캐릭터를 이동한다.
