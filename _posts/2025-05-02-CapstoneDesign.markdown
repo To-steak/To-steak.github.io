@@ -251,7 +251,7 @@ LLM 응답을 받으면 UI에 표시한다.
 
 ![LLM_Response](/images/CapstoneDesign/LLM_Response.png)
 
-<iframe width="560" height="315" src="https://youtu.be/s1SLKenSphE" frameborder="0" allowfullscreen></iframe>
+<iframe width="1378" height="775" src="https://www.youtube.com/embed/s1SLKenSphE" title="25년 1학기 SW 캡스톤 디자인 시연 동영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 유니티 프로젝트는 [여기][Capstone-gh]에서 확인할 수 있습니다.
 

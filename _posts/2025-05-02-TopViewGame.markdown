@@ -293,7 +293,7 @@ private void Update()
 
 ![ClassDiagram](/images/TopView/TopviewClassDiagram.png)
 
-<iframe width="560" height="315" src="https://youtu.be/M5NMd_ieZOM" frameborder="0" allowfullscreen></iframe>
+<iframe width="1378" height="775" src="https://www.youtube.com/embed/M5NMd_ieZOM" title="Top View 게임 플레이 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 프로젝트는 [여기][TopView-gh] 에서 확인할 수 있습니다.
 
