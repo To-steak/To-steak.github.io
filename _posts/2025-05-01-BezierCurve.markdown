@@ -29,7 +29,7 @@ categories: [Unity, Bezier]
 
 따라서 네 개의 점으로 다음과 같이 곡선을 표현할 수 있다.
 
-![3_bezier](/images/Bezier_3_big.gif)
+![3_bezier](/images/BezierCurve/Bezier_3_big.gif)
 
 (이미지 출처: WIKIPEDIA)
 
