@@ -1,13 +1,16 @@
 <script setup>
-import Giscus from '@giscus/vue' // npm install @giscus/vue 필요
-import { useData } from 'vitepress'
+import Giscus from '@giscus/vue'
+import { useData, useRoute } from 'vitepress'
 
 const { isDark } = useData()
+const route = useRoute()
+
 </script>
 
 <template>
   <div style="margin-top: 50px;">
     <Giscus
+      :key="route.path"
       repo="To-steak/To-steak.github.io" 
       repo-id="R_kgDOMwbQZw"
       category="General"
