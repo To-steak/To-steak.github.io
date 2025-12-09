@@ -7,21 +7,24 @@
 
 /* 유니티 콘솔 로그 스타일의 Tip 박스 */
 :root {
+  --vp-layout-max-width: 125rem;
+  /* --vp-content-max-width: 500rem; */
+
   --vp-custom-block-tip-bg: #2a2a2a; /* 유니티 배경색 */
   --vp-custom-block-tip-border: #424242;
   --vp-custom-block-tip-text: #bdbdbd;
 }
 
 .custom-block.tip {
-  border-left: 5px solid #4caf50; /* 초록색 성공 라인 */
+  border-left: 0.3125rem solid #4caf50; /* 초록색 성공 라인 */
   background-color: var(--vp-custom-block-tip-bg);
   color: var(--vp-custom-block-tip-text);
   font-family: 'Consolas', monospace; /* 코딩 폰트 */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.3);
 }
 
 .custom-block.tip p.custom-block-title {
   color: #fff;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }

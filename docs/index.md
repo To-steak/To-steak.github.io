@@ -88,7 +88,7 @@ const selectCategory = (cat) => {
 
 <style>
 .blog-container {
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
     padding: 2rem 1.5rem; 
     padding-top: 2rem;
@@ -107,7 +107,7 @@ const selectCategory = (cat) => {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1.5;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
 }
 
 .post-item {
@@ -119,15 +119,15 @@ const selectCategory = (cat) => {
 
 .post-link {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     color: inherit !important;
     padding-bottom: 2rem;
 }
 
 .post-thumb {
     flex-shrink: 0;
-    width: 120px;
-    height: 120px;
+    width: 7.5rem;
+    height: 7.5rem;
     border-radius: 12px;
     overflow: hidden;
     background-color: var(--vp-c-bg-alt);
@@ -149,7 +149,7 @@ const selectCategory = (cat) => {
 }
 
 .post-item:hover {
-    transform: translateX(5px);
+    transform: translateX(0.3125rem);
 }
 
 .post-title {
@@ -177,7 +177,7 @@ const selectCategory = (cat) => {
 
 /* --- 카테고리 버튼 스타일 --- */
 .category-nav {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 3rem; 
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3125rem; margin-bottom: 3rem; 
 }
 
 .cat-chip {
