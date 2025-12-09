@@ -2,8 +2,8 @@
 title: Bezier Curve
 description: 유니티에서 베지어 곡선을 구현하고 시각화하는 방법을 다룹니다.
 outline: deep
+excerpt: "요약글"
 ---
-
 # Bezier Curve
 
 > **베지에 곡선 (Wikipedia)**
