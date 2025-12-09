@@ -11,11 +11,10 @@ export default defineConfig({
     const head: any[] = []
     head.push(['meta', { property: 'og:title', content: pageData.title || 'My DevLog' }])
     head.push(['meta', { property: 'og:description', content: pageData.description || 'Unity 개발 로그' }])
+
     const image = pageData.frontmatter.thumbnail || '/images/Logos/Unity_Logo_Black.png'
     const imageUrl = `${hostname}${image}` // 절대 경로로 변환
     head.push(['meta', { property: 'og:image', content: imageUrl }])
-  
-    // 트위터/디스코드용 카드 스타일 (큰 이미지)
     head.push(['meta', { name: 'twitter:card', content: 'summary_large_image' }])
 
     return head
@@ -31,7 +30,6 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
     ],
 
     sidebar: [
@@ -39,9 +37,8 @@ export default defineConfig({
         text: 'Category',
         items: [
           { text: 'Unity', link: '/categories?category=Unity' },
-          { text: 'C#', link: '/categories?category=C_Sharp' },
-          { text: 'WebGL', link: '/categories?category=WebGL' },
-          { text: '잡담', link: '/categories?category=Talk' }
+          { text: 'Csharp', link: '/categories?category=C_Sharp' },
+          { text: 'WebGL', link: '/categories?category=WebGL' }
         ]
       }
     ],

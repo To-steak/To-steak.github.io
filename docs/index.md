@@ -21,6 +21,8 @@ hero:
 <script setup>
 import { data as posts } from './posts.data.ts'
 import { computed } from 'vue'
+import { useData } from 'vitepress'
+const { isDark } = useData()
 
 const categories = computed(() => {
   const allCats = posts.map(p => p.category).filter(Boolean)
@@ -44,7 +46,7 @@ const categories = computed(() => {
     <div v-for="post in posts" :key="post.url" class="post-item">
       <a :href="post.url" class="post-link">
         <div class="post-thumb">
-          <img :src="post.thumbnail" alt="thumbnail"/>
+          <img :src="isDark ? post.thumbnailDark : post.thumbnail" alt="thumbnail" />
         </div>
         <div class="post-text">
           <h2 class="post-title">{{ post.title }}</h2>
@@ -88,7 +90,6 @@ const categories = computed(() => {
   transition: transform 0.2s ease;
 }
 
-/* ✅ 새로 추가된 핵심 스타일 */
 .post-link {
   display: flex; /* 가로 배치 */
   gap: 20px;     /* 이미지와 텍스트 사이 간격 */
@@ -97,7 +98,6 @@ const categories = computed(() => {
   padding-bottom: 2rem; /* 여기서 패딩 처리 */
 }
 
-/* ✅ 썸네일 이미지 스타일 */
 .post-thumb {
   flex-shrink: 0; /* 이미지 영역이 찌그러지지 않게 고정 */
   width: 120px;   /* 이미지 너비 */

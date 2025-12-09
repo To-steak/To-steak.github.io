@@ -25,6 +25,10 @@ const filteredPosts = computed(() => {
 })
 </script>
 
+<ClientOnly>
+
+<div class="content-wrapper">
+
 # {{ selectedCategory ? selectedCategory + ' 글 모음' : '전체 글 목록' }}
 
 <div v-if="filteredPosts.length === 0" class="empty-msg">
@@ -48,7 +52,12 @@ const filteredPosts = computed(() => {
   </div>
 </div>
 
+</div>
+
+</ClientOnly>
+
 <style>
+.content-wrapper { max-width: 800px; margin: 0 auto; padding-top: 2rem; }
 .post-list { margin-top: 2rem; }
 .post-item { margin-bottom: 2rem; border-bottom: 1px solid var(--vp-c-divider); }
 .post-link { display: flex; gap: 20px; text-decoration: none; color: inherit; padding-bottom: 1.5rem; }
