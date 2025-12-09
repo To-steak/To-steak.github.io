@@ -1,8 +1,8 @@
 ---
-layout: single
 title:  "TopView Game"
-date:   2025-05-29 22:48:12 +0900
-categories: [Unity]
+description: 골드메탈 형님
+outline: deep
+excerpt: "탑뷰 요약"
 ---
 
 - 프로젝트 명: Monster Hunter
