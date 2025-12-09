@@ -1,0 +1,37 @@
+{
+  "hash": "2c5894b3",
+  "configHash": "7821505c",
+  "lockfileHash": "7089db3e",
+  "browserHash": "74c54468",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "a4fd92bd",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "6bbe2aff",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../../node_modules/@vueuse/core/dist/index.js",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "fdc066ac",
+      "needsInterop": false
+    },
+    "medium-zoom": {
+      "src": "../../../../node_modules/medium-zoom/dist/medium-zoom.esm.js",
+      "file": "medium-zoom.js",
+      "fileHash": "74cbe010",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-TICTUL3T": {
+      "file": "chunk-TICTUL3T.js"
+    }
+  }
+}
