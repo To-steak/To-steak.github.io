@@ -20,12 +20,24 @@ hero:
 
 <script setup>
 import { data as posts } from './posts.data.ts'
+import { computed } from 'vue'
+
+const categories = computed(() => {
+  const allCats = posts.map(p => p.category).filter(Boolean)
+  return [...new Set(allCats)]
+})
 </script>
 
 <div class="blog-container">
   <div class="blog-header">
     <h1>My DevLog</h1>
     <p>Unity 개발자의 삽질 기록장</p>
+  </div>
+
+  <div class='category-nav' v-if="categories.length > 0">
+    <a v-for="cat in categories" :key="cat" :href="`/categories?category=${cat}`" class="cat-chip">
+      #{{ cat }}
+    </a>
   </div>
 
   <div class="post-list">
@@ -60,11 +72,6 @@ import { data as posts } from './posts.data.ts'
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
-  background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  /* 그라데이션 텍스트 설정 */
   background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -146,5 +153,32 @@ import { data as posts } from './posts.data.ts'
 .post-excerpt {
   color: var(--vp-c-text-2);
   line-height: 1.6;
+}
+
+/* --- 카테고리 버튼 스타일 --- */
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;       /* 화면 좁으면 다음 줄로 넘김 */
+  justify-content: center; /* 가운데 정렬 */
+  gap: 10px;             /* 버튼 사이 간격 */
+  margin-bottom: 3rem;   /* 아래쪽 목록과의 거리 */
+}
+
+.cat-chip {
+  padding: 6px 16px;
+  background-color: var(--vp-c-bg-alt); /* 배경색 (테마 따라 변함) */
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 20px;   /* 둥근 알약 모양 */
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+  transition: all 0.2s ease;
+}
+
+.cat-chip:hover {
+  background-color: var(--vp-c-brand); /* 마우스 올리면 브랜드 색상 */
+  color: white;           /* 글자는 흰색으로 */
+  border-color: var(--vp-c-brand);
+  transform: translateY(-2px); /* 살짝 떠오르는 효과 */
 }
 </style>

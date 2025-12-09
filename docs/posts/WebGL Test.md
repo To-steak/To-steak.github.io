@@ -3,6 +3,7 @@ title:  WebGL Test
 description: WebGL 테스트입니다.
 outline: deep
 excerpt: "요약임"
+category: WebGL
 ---
 # TEST: WEB GL
 

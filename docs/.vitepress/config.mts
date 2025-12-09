@@ -36,10 +36,12 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Category',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Unity', link: '/categories?category=Unity' },
+          { text: 'C#', link: '/categories?category=C_Sharp' },
+          { text: 'WebGL', link: '/categories?category=WebGL' },
+          { text: '잡담', link: '/categories?category=Talk' }
         ]
       }
     ],
