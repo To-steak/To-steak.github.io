@@ -1,7 +1,8 @@
 // posts.data.ts
 import { createContentLoader } from 'vitepress'
 
-const DEFAULT_THUMBNAIL = '/images/Logos/Unity_Logo_Black.png'
+const DEFAULT_THUMBNAIL_WHITE = '/images/Logos/Unity_Logo_Black.png'
+const DEFAULT_THUMBNAIL_DARK = '/images/Logos/Unity_Logo_White.png'
 
 export default createContentLoader('posts/*.md', {
   excerpt: true,
@@ -11,7 +12,8 @@ export default createContentLoader('posts/*.md', {
         title: frontmatter.title,
         url,
         excerpt: frontmatter.excerpt || excerpt,
-        thumbnail: frontmatter.thumbnail ?? DEFAULT_THUMBNAIL,
+        thumbnail: frontmatter.thumbnail ?? DEFAULT_THUMBNAIL_WHITE,
+        thumbnailDark: frontmatter.thumbnailDark || DEFAULT_THUMBNAIL_DARK,
         date: formatDate(frontmatter.date),
         category: frontmatter.category || "Uncategorized"
       }))

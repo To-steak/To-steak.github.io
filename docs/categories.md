@@ -7,6 +7,8 @@ sidebar: false
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { data as posts } from './posts.data.ts'
+import { useData } from 'vitepress'
+const { isDark } = useData()
 
 const selectedCategory = ref('')
 
@@ -33,7 +35,7 @@ const filteredPosts = computed(() => {
   <div v-for="post in filteredPosts" :key="post.url" class="post-item">
     <a :href="post.url" class="post-link">
       <div class="post-thumb">
-        <img :src="post.thumbnail" alt="thumb" />
+        <img :src="isDark ? post.thumbnailDark : post.thumbnail" alt="thumbnail" />
       </div>
       <div class="post-text">
         <h2 class="post-title">{{ post.title }}</h2>
