@@ -96,7 +96,6 @@ const setPage = (page) => {
 
 
 <style>
-/* 기존 스타일 유지 및 페이지네이션 스타일 추가 */
 .content-wrapper { max-width: 800px; margin: 0 auto; padding-top: 2rem; }
 .post-list { margin-top: 2rem; }
 .post-item { margin-bottom: 2rem; border-bottom: 1px solid var(--vp-c-divider); }
@@ -117,7 +116,6 @@ const setPage = (page) => {
 }
 .empty-msg { padding: 4rem; text-align: center; color: var(--vp-c-text-2); }
 
-/* 페이지네이션 스타일 (index.md에서 가져옴) */
 .page-numbers { display: flex; gap: 5px; margin: 0 10px; }
 .page-number-btn {
   padding: 8px 12px; border-radius: 8px; background: var(--vp-c-bg-alt);

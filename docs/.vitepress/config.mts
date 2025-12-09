@@ -31,7 +31,10 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
     ],
-
+    docFooter: {
+      prev: false,
+      next: false
+    },
     sidebar: [
       {
         text: 'Category',
@@ -42,7 +45,6 @@ export default defineConfig({
         ]
       }
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/To-steak' }
     ]
