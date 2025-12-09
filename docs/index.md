@@ -1,21 +1,6 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: false
-
-hero:
-  name: "To-steak"
-  text: "Hello, World!"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-    - theme: alt
-      text: first
-      link: /BezierCurve
 ---
 
 <script setup>

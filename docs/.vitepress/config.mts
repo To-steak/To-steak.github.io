@@ -37,7 +37,7 @@ export default defineConfig({
         text: 'Category',
         items: [
           { text: 'Unity', link: '/categories?category=Unity' },
-          { text: 'Csharp', link: '/categories?category=C_Sharp' },
+          { text: 'Csharp', link: '/categories?category=Csharp' },
           { text: 'WebGL', link: '/categories?category=WebGL' }
         ]
       }
