@@ -11,42 +11,61 @@ import { useData } from 'vitepress'
 const { isDark } = useData()
 
 const selectedCategory = ref('')
-const currentPage = ref(1) // 현재 페이지 상태 추가 ⭐
-const postsPerPage = 5 // 한 페이지에 보여줄 글 개수
+const currentPage = ref(1)
+const postsPerPage = 5
 
-// 페이지가 열리면 주소창(URL)을 확인해서 카테고리 설정
+// --- [index.md에서 가져온 카테고리 로직] ---
+const categories = computed(() => {
+    const allCats = posts.map(p => p.category).filter(Boolean)
+    return ['All', ...new Set(allCats)] // 'All' 버튼을 목록에 추가
+})
+
+const selectCategory = (cat) => {
+    // 1. 상태 변경 (이것이 필터링을 즉시 트리거)
+    selectedCategory.value = (cat === 'All' ? '' : cat) // 'All'이면 URL의 빈 문자열과 동일하게 처리
+    
+    // 2. 페이지네이션 초기화
+    currentPage.value = 1 
+    
+    // 3. URL 업데이트 (SPA 상태 변경)
+    const newQuery = (cat === 'All' ? '' : `?category=${cat}`)
+    // URL을 변경하여 공유 링크가 필터링된 카테고리를 가리키도록 함
+    window.history.pushState({}, '', `/categories.html${newQuery}`)
+}
+// ---------------------------------------------
+
+// 페이지가 열리면 주소창(URL)을 확인해서 초기 카테고리 설정
 onMounted(() => {
   const urlParams = new URLSearchParams(window.location.search)
+  // URL에서 category 값을 읽어오거나, 없으면 빈 문자열('')로 초기화
   selectedCategory.value = urlParams.get('category') || ''
-  
-  // URL 변경 시 currentPage를 1로 리셋합니다.
   currentPage.value = 1 
 })
 
-// 1. 선택된 카테고리만 필터링
+// 1. 필터링 로직 (selectedCategory 상태를 따름)
 const categoryFiltered = computed(() => {
   if (!selectedCategory.value) return posts
   return posts.filter(post => post.category === selectedCategory.value)
 })
 
-// 2. 전체 페이지 수 계산 ⭐
+// 2. 전체 페이지 수 계산
 const totalPages = computed(() => {
   return Math.ceil(categoryFiltered.value.length / postsPerPage)
 })
 
-// 3. 현재 페이지에 보여줄 글 목록 계산 ⭐
+// 3. 현재 페이지에 보여줄 글 목록 계산
 const paginatedPosts = computed(() => {
     const start = (currentPage.value - 1) * postsPerPage
     const end = start + postsPerPage
     return categoryFiltered.value.slice(start, end)
 })
 
-// 4. 페이지 번호 배열 생성 ⭐
+// 4. 페이지 번호 배열 생성
 const pageNumbers = computed(() => {
   return Array.from({ length: totalPages.value }, (_, i) => i + 1)
 })
 
-// 5. 페이지 이동 함수 ⭐
+// 5. 페이지 이동 함수 
 const setPage = (page) => {
   if (page >= 1 && page <= totalPages.value) {
     currentPage.value = page
@@ -59,8 +78,18 @@ const setPage = (page) => {
 
 <div class="content-wrapper">
 
-# {{ selectedCategory ? selectedCategory + ' 글 모음' : '전체 글 목록' }}
+<h1>{{ selectedCategory || '전체' }} 글 목록</h1>
 
+<div class='category-nav' v-if="categories.length > 0">
+  <button 
+    v-for="cat in categories" 
+    :key="cat" 
+    @click="selectCategory(cat)" 
+    :class="['cat-chip', { active: selectedCategory === cat || (selectedCategory === '' && cat === 'All') }]"
+  >
+    {{ cat }}
+  </button>
+</div>
 <div v-if="paginatedPosts.length === 0" class="empty-msg">
   이 카테고리에 아직 글이 없습니다. 😅
 </div>
@@ -96,6 +125,7 @@ const setPage = (page) => {
 
 
 <style>
+/* 기존 스타일 유지 및 페이지네이션 스타일 추가 */
 .content-wrapper { max-width: 800px; margin: 0 auto; padding-top: 2rem; }
 .post-list { margin-top: 2rem; }
 .post-item { margin-bottom: 2rem; border-bottom: 1px solid var(--vp-c-divider); }
@@ -116,6 +146,19 @@ const setPage = (page) => {
 }
 .empty-msg { padding: 4rem; text-align: center; color: var(--vp-c-text-2); }
 
+/* --- 카테고리 버튼 스타일 추가 --- */
+.category-nav {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 3rem; 
+}
+.cat-chip {
+    padding: 6px 16px; background-color: var(--vp-c-bg-alt); border: 1px solid var(--vp-c-divider); 
+    border-radius: 20px; font-size: 0.95rem; cursor: pointer; color: var(--vp-c-text-1); transition: all 0.2s ease;
+}
+.cat-chip:hover { background-color: var(--vp-c-brand); color: white; border-color: var(--vp-c-brand); transform: translateY(-2px); }
+.cat-chip.active { background-color: var(--vp-c-brand); color: white; border-color: var(--vp-c-brand); }
+
+
+/* 페이지네이션 스타일 */
 .page-numbers { display: flex; gap: 5px; margin: 0 10px; }
 .page-number-btn {
   padding: 8px 12px; border-radius: 8px; background: var(--vp-c-bg-alt);
