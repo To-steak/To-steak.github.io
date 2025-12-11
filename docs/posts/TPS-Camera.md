@@ -64,10 +64,12 @@ public class PlayerController : MonoBehaviour
 ```
 
 ### PlayerMovement.cs
-캐릭터 움직임은 CharacterController 컴포넌트를 사용한다.
-[Unity Documentation][unity-docs]에서 가져왔다.   
-playerVelocity.y 를 -2로 하는 이유는 땅에 확실히 닿게 하여 바로 점프할 수 있도록 하기 위함이다. 0으로 하면 열에 여덟은 점프가 안 먹는다.   
-(궁금하면 해보셈)  
+움직임은 CharacterController 컴포넌트를 사용한다.   
+[Unity Documentation][unity-docs]에서 코드를 가져왔다.   
+::: warning
+playerVelocity.y 를 -2로 하는 이유는 땅에 확실히 닿게 하여 바로 점프할 수 있도록 하기 위함이다.   
+0으로 하면 열에 여덟은 점프가 안 먹는다.   
+:::
 ```cs
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -140,13 +142,13 @@ public class PlayerMovement : MonoBehaviour
 
 ### PlayerCamera.cs
 마우스 입력을 통해 회전한다.   
-여기서 주의할 게 있는데, 마우스를 좌, 우로 움직이면 **캐릭터**가 y축(YAW) 회전하고,   
-위, 아래로 움직이면 **카메라**만 x축(PITCH) 회전해야 한다.   
-안 그러면 아래를 볼 때 캐릭터도 같이 땅바닥에 뽀뽀한다.   
-
-그래서 mouseX(좌, 우)는 캐릭터의 y축(YAW) 회전을 맡고,   
+mouseX(좌, 우)는 캐릭터의 y축(YAW) 회전을 맡고,   
 mouseY(상, 하)는 카메라의 x축(PITCH) 회전을 맡는다.   
-이를 위해 cameraTransform 변수에 Camera Rig가 필요하다.   
+이를 위해 cameraTransform 변수에 Camera Rig가 필요하다. 
+::: warning
+마우스를 좌, 우로 움직이면 **캐릭터**가 y축(YAW) 회전하고,   
+위, 아래로 움직이면 **카메라**만 x축(PITCH) 회전해야 한다.   
+:::
 ```cs
 using UnityEngine;
 
@@ -188,13 +190,12 @@ Cinemachine Camera 설정은 아래 사진처럼 해준다.
 ## 계층 구조
 Camera Rig는 아무것도 없는 빈 게임 오브젝트이다.   
 이름 그대로 시네머신 카메라가 바라보는 대상이다.   
-
-
-Cinemachine Camera, PlayerCamera.cs 및 PlayerMovement.cs 들이 참조하는 Camera Transform 은 Camera Rig 이다.   
+::: info
+Cinemachine Camera, PlayerCamera.cs 및 PlayerMovement.cs 들이 참조하는 Camera Transform 은 Camera Rig 이다.  
+::: 
 ![Hierarchy](/images/TPS-Camera/Hierarchy.png)
 
 ## 마무리
-잘 되는 것을 확인했다.
 ![Finally](/images/TPS-Camera/Finally.gif)
 
 [unity-docs]: https://docs.unity3d.com/6000.3/Documentation/ScriptReference/CharacterController.Move.html
