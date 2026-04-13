@@ -1,8 +1,8 @@
 ---
 title:  WebGL Test
-description: WebGL 테스트입니다.
+date: 2025-12-11
 outline: deep
-excerpt: "요약임"
+excerpt: WebGL 테스트입니다.
 category: WebGL
 ---
 # TEST: WEB GL

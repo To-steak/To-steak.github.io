@@ -54,8 +54,7 @@ const selectCategory = (cat) => {
 
 <div class="blog-container">
   <div class="blog-header">
-    <h1>My DevLog</h1>
-    <p>Unity 개발자의 삽질 기록장</p>
+    <h1>Unity To_steak</h1>
   </div>
 
   <div class='category-nav' v-if="categories.length > 0">
@@ -70,7 +69,10 @@ const selectCategory = (cat) => {
         </div>
         <div class="post-text">
           <h2 class="post-title">{{ post.title }}</h2>
-          <div class="post-date">{{ post.date.string }}</div>
+          <div class="post-meta">
+            <span v-if="post.category" class="category-badge">{{ post.category }}</span>
+            <span class="post-date">{{ post.date.string }}</span>
+          </div>
           <div v-if="post.excerpt" class="post-excerpt" v-html="post.excerpt"></div>
         </div>
       </a>
@@ -200,4 +202,29 @@ const selectCategory = (cat) => {
     border-color: var(--vp-c-brand);
 }
 .pagination { display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 4rem; }
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* [추가된 부분] 파란색 카테고리 배지 스타일 */
+.category-badge {
+    background-color: var(--vp-c-brand);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    flex-shrink: 0; /* 배지 크기 고정 */
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: var(--vp-c-text-2);
+    /* margin-bottom은 post-meta에서 관리하므로 제거 */
+    margin-bottom: 0; 
+}
 </style>

@@ -1,8 +1,8 @@
 ---
 title: TPS 카메라 만들기 (a.k.a. Palworld)
-description: 유니티로 TPS 카메라 만들기 with Cinemachine
+date: 2025-12-11
 outline: deep
-excerpt: 유니티로 TPS 게임에서 쓰이는 시네머신 카메라를 구현하였다.
+excerpt: 유니티로 TPS 게임에서 쓰이는 시네머신 카메라를 구현합니다.
 category: Unity
 ---
 

@@ -106,6 +106,7 @@ const setPage = (page) => {
           <span class="category-badge">{{ post.category }}</span>
           <span class="post-date">{{ post.date.string }}</span>
         </div>
+        <div v-if="post.excerpt" class="post-excerpt" v-html="post.excerpt"></div>
       </div>
     </a>
   </div>
@@ -127,6 +128,12 @@ const setPage = (page) => {
 <style>
 /* 기존 스타일 유지 및 페이지네이션 스타일 추가 */
 .content-wrapper { max-width: 800px; margin: 0 auto; padding-top: 2rem; }
+/* 제목 가운데 정렬 및 간격 조정 */
+.content-wrapper h1 {
+  text-align: center;
+  margin-bottom: 2rem; /* 아래 카테고리 칩과의 간격 */
+  word-break: keep-all; /* 한글 단어가 잘리지 않게 설정 */
+}
 .post-list { margin-top: 2rem; }
 .post-item { margin-bottom: 2rem; border-bottom: 1px solid var(--vp-c-divider); }
 .post-link { display: flex; gap: 20px; text-decoration: none; color: inherit; padding-bottom: 1.5rem; }
@@ -135,6 +142,25 @@ const setPage = (page) => {
 .post-text { flex-grow: 1; }
 .post-title { font-size: 1.2rem; font-weight: bold; margin: 0 0 0.5rem; }
 .post-meta { font-size: 0.9rem; color: var(--vp-c-text-2); display: flex; gap: 10px; align-items: center; }
+
+.post-excerpt {
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+  font-size: 0.95rem; /* 살짝 작게 조절해도 좋습니다 */
+  margin-top: 0.5rem;
+  /* 요약문이 너무 길어질 경우 2줄까지만 보이게 하고 싶다면 아래 주석을 해제하세요 */
+  /*
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  */
+}
+
+/* meta 정보 간격 조정 */
+.post-meta {
+  margin-bottom: 0.5rem; /* 요약문과의 간격을 위해 살짝 줄였습니다 */
+}
 
 .category-badge {
   background-color: var(--vp-c-brand);

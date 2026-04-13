@@ -1,8 +1,8 @@
 ---
 title:  "TopView Game"
-description: 골드메탈 형님
+date: 2025-12-11
 outline: deep
-excerpt: "탑뷰 요약"
+excerpt: 학부 2학년때 만든 TopView 게임입니다.
 category: Unity
 ---
 
