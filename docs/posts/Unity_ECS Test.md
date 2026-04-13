@@ -455,3 +455,9 @@ partial struct BitCollisionSystem : ISystem
 - 하지만 세상에 100,000개 총알 중 적의 비율이 적기 때문에 적과 총알의 비율이 같아지는 순간이 오면 성능이 역전될 수 있다.
 - Unity Editor에서 적의 수를 20,000 정도로 늘리면 `BestCollisionSystem`이 성능이 좋아지게 된다.
 - 하지만 세상의 크기를 반지름이 1,000인 원으로 제한했기 때문에 충돌이 일어나지 않는 경우보다 충돌이 일어나는 경우가 더 빈번하다는 점을 고려해야 한다.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pQRCIHdseh8?si=-bsOGxb3Z73dpLNB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+프로젝트는 [여기][ECS_Github]에서 확인하실 수 있습니다.
+
+[ECS_Github]: https://github.com/To-steak/Unity_ECS_TEST
