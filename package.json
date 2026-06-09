@@ -1,15 +1,26 @@
 {
+  "name": "to-steak.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "devDependencies": {
-    "@giscus/vue": "^3.1.1",
-    "markdown-it-mathjax3": "^4.3.2",
-    "vitepress": "^2.0.0-alpha.15"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/To-steak/To-steak.github.io.git"
   },
-  "dependencies": {
-    "medium-zoom": "^1.1.0"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/To-steak/To-steak.github.io/issues"
+  },
+  "homepage": "https://github.com/To-steak/To-steak.github.io#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
   }
 }
