@@ -12,13 +12,13 @@ hero:
   actions:
     - theme: brand
       text: Unity Client
-      link: /client/client_01.md
+      link: /client/client_01
     - theme: alt
       text: Unity DOTS
-      link: /dots/dots_01.md
+      link: /dots/dots_01
     - theme: alt
       text: Netcode for GameObjects
-      link: /netcode/netcode_01.md
+      link: /netcode/netcode_01
 
 features:
   - icon: 
