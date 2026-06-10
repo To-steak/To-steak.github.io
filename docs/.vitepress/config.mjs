@@ -1,25 +1,43 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "To_steak's Devlog",
   description: "Unity Client",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Home', link: '/' }
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    // 여기서 배열([])을 제거하고 바로 객체로 시작하세요
+    sidebar: {
+      '/client/': [
+        {
+          text: 'Unity Client',
+          items: [
+            { text: 'Client 01', link: '/client/client_01' }, // 파일 경로 수정
+            { text: 'Client 02', link: '/client/client_02' }
+          ]
+        }
+      ],
+      '/dots/': [
+        {
+          text: 'Unity DOTS',
+          items: [
+            { text: 'DOTS 01', link: '/dots/dots_01' },
+            { text: 'DOTS 02', link: '/dots/dots_02' }
+          ]
+        }
+      ],
+      '/netcode/': [
+        {
+          text: 'Netcode for GameObjects',
+          items: [
+            { text: 'Netcode 01', link: '/netcode/netcode_01' },
+            { text: 'Netcode 02', link: '/netcode/netcode_02' }
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/To-steak' }

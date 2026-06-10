@@ -5,21 +5,36 @@ layout: home
 hero:
   name: "To_steak's Devlog"
   text: "Unity Client"
-  tagline: My great project tagline
+  tagline: Troubleshooting during Unity development
+  image:
+    dark: /images/Unity_Logo_White.png
+    light: /images/Unity_Logo_Black.png
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Unity Client
+      link: /client/client_01.md
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Unity DOTS
+      link: /dots/dots_01.md
+    - theme: alt
+      text: Netcode for GameObjects
+      link: /netcode/netcode_01.md
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 
+      dark: /images/Unity_Logo_White.png
+      light: /images/Unity_Logo_Black.png
+    title: Unity Client
+    details: MonoBehaviour, CustomEditor
+  - icon:
+      dark: /images/Unity_Logo_White.png
+      light: /images/Unity_Logo_Black.png
+    title: Unity DOTS
+    details: ECS, Burst Compiler, C# Job System
+  - icon: 
+      dark: /images/Unity_Logo_White.png
+      light: /images/Unity_Logo_Black.png
+    title: Netcode for GameObject
+    details: Not yet
 ---
 
