@@ -8,13 +8,12 @@ export default defineConfig({
       { text: 'Home', link: '/' }
     ],
 
-    // 여기서 배열([])을 제거하고 바로 객체로 시작하세요
     sidebar: {
       '/client/': [
         {
           text: 'Unity Client',
           items: [
-            { text: 'Client 01', link: '/client/client_01' }, // 파일 경로 수정
+            { text: 'Client 01', link: '/client/client_01' },
             { text: 'Client 02', link: '/client/client_02' }
           ]
         }
