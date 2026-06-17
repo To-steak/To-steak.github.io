@@ -20,19 +20,18 @@ export default defineConfig({
       ],
       '/dots/': [
         {
-          text: 'Unity DOTS',
+          text: 'ECS',
           items: [
             { text: 'DOTS 01', link: '/dots/dots_01' },
             { text: 'DOTS 02', link: '/dots/dots_02' }
           ]
         }
       ],
-      '/netcode/': [
+      '/misc/': [
         {
-          text: 'Netcode for GameObjects',
+          text: 'NDC',
           items: [
-            { text: 'Netcode 01', link: '/netcode/netcode_01' },
-            { text: 'Netcode 02', link: '/netcode/netcode_02' }
+            { text: 'NDC26', link: '/misc/NDC26_기술_면접은_무엇을_평가하는가' }
           ]
         }
       ]

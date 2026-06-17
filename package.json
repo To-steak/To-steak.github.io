@@ -22,5 +22,8 @@
   "homepage": "https://github.com/To-steak/To-steak.github.io#readme",
   "devDependencies": {
     "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "lucide-vue-next": "^1.0.0"
   }
 }
