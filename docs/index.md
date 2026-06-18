@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "To_steak's Devlog"
   text: "Unity Client"
-  tagline: 유니티 개발 중 일어난 트러블슈팅
+  tagline: 유니티 개발 중 마주친 트러블슈팅 기록
   image:
     dark: /images/Unity_Logo_White.png
     light: /images/Unity_Logo_Black.png

@@ -13,7 +13,7 @@ export default defineConfig({
         {
           text: 'Unity Client',
           items: [
-            { text: 'Client 01', link: '/client/client_01' },
+            { text: '확장 가능한 무기 아키텍처', link: '/client/client_01' },
             { text: 'Client 02', link: '/client/client_02' }
           ]
         }
