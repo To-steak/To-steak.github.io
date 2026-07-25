@@ -1,4 +1,4 @@
-# project_01: 확장 가능한 무기 아키텍처
+# 확장 가능한 무기 아키텍처
 
 GitHub Repository [![GitHub](https://img.shields.io/badge/GitHub-project__01-black?logo=github)](https://github.com/To-steak/project_01)
 

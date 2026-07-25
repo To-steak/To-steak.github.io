@@ -1,4 +1,4 @@
-# project_01: Assembly Definition
+# Assembly Definition
 
 GitHub Repository [![GitHub](https://img.shields.io/badge/GitHub-project__01-black?logo=github)](https://github.com/To-steak/project_01)
 
