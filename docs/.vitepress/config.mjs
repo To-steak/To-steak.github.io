@@ -17,17 +17,14 @@ export default defineConfig({
             { text: '어셈블리 정의', link: '/client/client_02' },
             { text: '풀과 애니메이터 변수 초기화', link: '/client/client_03' }
           ]
+        },
+        {
+          text: 'Project 02',
+          items: [
+            { text: 'NGO 멀티플레이 구조 세우기', link: '/client/client_04.md' },
+          ]
         }
       ],
-      // '/dots/': [
-      //   {
-      //     text: 'ECS',
-      //     items: [
-      //       { text: 'DOTS 01', link: '/dots/dots_01' },
-      //       { text: 'DOTS 02', link: '/dots/dots_02' }
-      //     ]
-      //   }
-      // ],
       '/misc/': [
         {
           text: 'NDC',
