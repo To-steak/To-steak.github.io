@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: "To_steak's Devlog",
-  description: "Unity Client",
+  description: "Unity",
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' }
