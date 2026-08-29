@@ -1,3 +1,7 @@
+---
+title: 확장 가능한 무기 아키텍처
+description: Player 전용 무기 시스템을 Enemy와 공유할 때 생기는 문제 해결 과정
+---
 # 확장 가능한 무기 아키텍처
 
 GitHub Repository [![GitHub](https://img.shields.io/badge/GitHub-project__01-black?logo=github)](https://github.com/To-steak/project_01)

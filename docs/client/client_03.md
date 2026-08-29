@@ -1,3 +1,7 @@
+---
+title: 풀과 애니메이터 변수 초기화
+description: 풀을 사용하면 비활성화되는 Animator 컴포넌트에 관한 이야기
+---
 # Object Pool & Animator Parameter
 
 ## 문제

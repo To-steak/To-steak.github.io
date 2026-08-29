@@ -1,3 +1,7 @@
+---
+title: Netcode for GameObjects 멀티플레이 구조
+description: NGO를 사용한 프로젝트에서 멀티 플레이 구조 세우기
+---
 # Netcode for GameObjects 멀티플레이 구조
 
 이전 project_01에 이어서 [project_02](https://github.com/To-steak/project_02) 개발을 시작했다.

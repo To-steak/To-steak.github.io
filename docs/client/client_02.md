@@ -1,3 +1,7 @@
+---
+title: Assembly Definition
+description: Assembly Definition을 사용해 컴파일 속도 개선하기
+---
 # Assembly Definition
 
 GitHub Repository [![GitHub](https://img.shields.io/badge/GitHub-project__01-black?logo=github)](https://github.com/To-steak/project_01)
