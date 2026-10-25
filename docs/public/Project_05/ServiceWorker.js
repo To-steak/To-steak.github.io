@@ -1,4 +1,4 @@
-const cacheName = "To_steak-Project_05-0.1.0";
+const cacheName = "DefaultCompany-Project-0.1.0";
 const contentToCache = [
     "Build/project_05.loader.js",
     "Build/project_05.framework.js.unityweb",
