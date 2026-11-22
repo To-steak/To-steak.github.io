@@ -1,11 +1,42 @@
-@font-face {
-  font-family: 'Maplestory Light';
-  src: url('/fonts/Maplestory Light.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+/* Pretendard는 theme/index.js에서 npm 패키지로 불러와 빌드에 포함한다 */
+:root {
+  --vp-font-family-base: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
-:root {
-  --vp-font-family-base: 'Maplestory Light', sans-serif;
+/* 이미지를 나란히 두는 레이아웃: <div class="image-row"> 안에 <div>를 열 개수만큼 넣는다 */
+.vp-doc .image-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.vp-doc .image-row > div > :first-child {
+  margin-top: 0;
+}
+
+.vp-doc .image-row img {
+  width: 100%;
+}
+
+/* 섹션 사이 간격: 제목 위 여백을 기본값(h2 48px, h3 32px, h4 24px)보다 넓힌다 */
+.vp-doc h2 {
+  margin-top: 72px;
+  padding-top: 32px;
+}
+
+.vp-doc h3 {
+  margin-top: 56px;
+}
+
+.vp-doc h4 {
+  margin-top: 40px;
+}
+
+/* 메이플스토리 툴팁 글자: 사진 속 툴팁 색(노란 글자 #ffcc00, 배경 #2d353b)을 그대로 쓴다 */
+.vp-doc .maple-text {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: #2d353b;
+  color: #ffcc00;
 }

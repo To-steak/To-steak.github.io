@@ -25,14 +25,14 @@ export default defineConfig({
           ]
         }
       ],
-      // '/dots/': [
-      //   {
-      //     text: 'DOTS',
-      //     items: [
-      //       { text: '총알 10만 개 충돌시켜보기', link: '/dots/dots_01' }
-      //     ]
-      //   }
-      // ],
+      '/portfolio/': [
+        {
+          text: 'Portfolio',
+          items: [
+            { text: 'TopView Game', link: '/portfolio/TopView-Game' }
+          ]
+        }
+      ],
       '/misc/': [
         {
           text: 'NDC',

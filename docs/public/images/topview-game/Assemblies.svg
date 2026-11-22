@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="450" viewBox="0 0 900 450" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">
+  <!--
+    게임 어셈블리(asmdef)의 참조 방향. 좌표로 직접 그린 그림이다.
+    큰 상자는 어셈블리, 안의 작은 상자는 그 어셈블리에 들어가는 폴더(asmref 포함)다.
+    화살표는 README의 그래프와 같은 범위만 그린다.
+    점선 상자는 asmref로 그 어셈블리에 들어가는 폴더, 실선 상자는 asmdef가 있는 폴더다.
+    줄 배치: 0줄 Core / 1줄 Systems, Presentation, UserInterface, Authoring, Persistence / 2줄 Definitions / 3줄 Entity
+  -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="450" fill="#FFFFFF"/>
+
+  <!-- 선 -->
+  <g fill="none" stroke="#555555" stroke-width="1.2">
+    <!-- Core에서 1줄로: Core 아래 가운데에서 나와 가로선에서 나뉜다 -->
+    <path d="M450,70 V95"/>
+    <path d="M170,95 H780"/>
+    <path d="M170,95 V120" marker-end="url(#arrow)"/>
+    <path d="M360,95 V145" marker-end="url(#arrow)"/>
+    <path d="M500,95 V145" marker-end="url(#arrow)"/>
+    <path d="M640,95 V145" marker-end="url(#arrow)"/>
+    <path d="M780,95 V145" marker-end="url(#arrow)"/>
+
+    <!-- Authoring에서 Definitions로 -->
+    <path d="M620,185 V240" marker-end="url(#arrow)"/>
+
+    <!-- Entity로: 각 상자 아래에서 내려와 가로선에서 모인 뒤, Entity 위 가운데로 들어간다 -->
+    <path d="M170,210 V310"/>
+    <path d="M360,185 V310"/>
+    <path d="M500,185 V310"/>
+    <path d="M620,280 V310"/>
+    <path d="M690,185 V310"/>
+    <path d="M780,185 V310"/>
+    <path d="M170,310 H780"/>
+    <path d="M450,310 V340" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- 0줄: Core -->
+  <rect x="380" y="20" width="140" height="50" rx="6" fill="#FFFFFF" stroke="#555555"/>
+  <text x="450" y="41" text-anchor="middle">Core</text>
+  <text x="450" y="59" text-anchor="middle">(App, World)</text>
+
+  <!-- 1줄: Systems 어셈블리와 그 안의 폴더 -->
+  <rect x="60" y="120" width="220" height="90" rx="6" fill="#F3F7FF" stroke="#555555"/>
+  <text x="170" y="139" text-anchor="middle" font-weight="bold">Systems</text>
+  <rect x="80" y="155" width="85" height="36" rx="5" fill="#FFFFFF" stroke="#888888"/>
+  <text x="122.5" y="177.5" text-anchor="middle">Systems</text>
+  <rect x="175" y="155" width="85" height="36" rx="5" fill="#FFFFFF" stroke="#888888" stroke-dasharray="4 3"/>
+  <text x="217.5" y="177.5" text-anchor="middle">Utilities</text>
+
+  <!-- 1줄: 폴더가 하나뿐인 어셈블리 -->
+  <rect x="300" y="145" width="120" height="40" rx="6" fill="#FFFFFF" stroke="#555555"/>
+  <text x="360" y="169.5" text-anchor="middle">Presentation</text>
+  <rect x="440" y="145" width="120" height="40" rx="6" fill="#FFFFFF" stroke="#555555"/>
+  <text x="500" y="169.5" text-anchor="middle">UserInterface</text>
+  <rect x="580" y="145" width="120" height="40" rx="6" fill="#FFFFFF" stroke="#555555"/>
+  <text x="640" y="169.5" text-anchor="middle">Authoring</text>
+  <rect x="720" y="145" width="120" height="40" rx="6" fill="#FFFFFF" stroke="#555555"/>
+  <text x="780" y="169.5" text-anchor="middle">Persistence</text>
+
+  <!-- 2줄: Definitions -->
+  <rect x="570" y="240" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#555555"/>
+  <text x="620" y="264.5" text-anchor="middle">Definitions</text>
+
+  <!-- 3줄: Entity 어셈블리와 그 안의 폴더 -->
+  <rect x="150" y="340" width="600" height="90" rx="6" fill="#F3F7FF" stroke="#555555"/>
+  <text x="450" y="359" text-anchor="middle" font-weight="bold">Entity</text>
+  <rect x="170" y="375" width="90" height="36" rx="5" fill="#FFFFFF" stroke="#888888"/>
+  <text x="215" y="397.5" text-anchor="middle">Entities</text>
+  <rect x="280" y="375" width="110" height="36" rx="5" fill="#FFFFFF" stroke="#888888" stroke-dasharray="4 3"/>
+  <text x="335" y="397.5" text-anchor="middle">Components</text>
+  <rect x="410" y="375" width="90" height="36" rx="5" fill="#FFFFFF" stroke="#888888" stroke-dasharray="4 3"/>
+  <text x="455" y="397.5" text-anchor="middle">Requests</text>
+  <rect x="520" y="375" width="90" height="36" rx="5" fill="#FFFFFF" stroke="#888888" stroke-dasharray="4 3"/>
+  <text x="565" y="397.5" text-anchor="middle">Records</text>
+  <rect x="630" y="375" width="100" height="36" rx="5" fill="#FFFFFF" stroke="#888888" stroke-dasharray="4 3"/>
+  <text x="680" y="397.5" text-anchor="middle">Commands</text>
+
+  <!-- 범례 -->
+  <rect x="768" y="372" width="22" height="14" rx="3" fill="#FFFFFF" stroke="#888888"/>
+  <text x="798" y="383.5" font-size="12">asmdef 폴더</text>
+  <rect x="768" y="398" width="22" height="14" rx="3" fill="#FFFFFF" stroke="#888888" stroke-dasharray="4 3"/>
+  <text x="798" y="409.5" font-size="12">asmref 폴더</text>
+</svg>

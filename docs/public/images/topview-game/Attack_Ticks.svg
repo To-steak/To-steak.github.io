@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="250" viewBox="0 0 900 250" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">
+  <!--
+    근접 공격 한 번의 틱 구간. 좌표로 직접 그린 그림이다.
+    세 값(Start, End, Duration Ticks)은 모두 공격 상태에 들어간 때(0틱)부터 잰다.
+    예시 값은 망치: Start 18, End 24, Duration 40(클립 0.8초 = 40틱).
+    가로 축: x=60이 0틱, x=840이 40틱. 1틱 = 19.5px. 18틱 x=411, 24틱 x=528.
+  -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="250" fill="#FFFFFF"/>
+
+  <!-- 경계 점선 -->
+  <g stroke="#AAAAAA" stroke-dasharray="4 3">
+    <path d="M60,50 V180"/>
+    <path d="M411,100 V180"/>
+    <path d="M528,75 V180"/>
+    <path d="M840,50 V180"/>
+  </g>
+
+  <!-- 0틱부터 재는 세 값 -->
+  <g fill="none" stroke="#555555" stroke-width="1.2">
+    <path d="M60,60 H840" marker-end="url(#arrow)"/>
+    <path d="M60,85 H528" marker-end="url(#arrow)"/>
+    <path d="M60,110 H411" marker-end="url(#arrow)"/>
+  </g>
+  <text x="450" y="54" text-anchor="middle">Duration Ticks = 40 (클립 끝)</text>
+  <text x="294" y="79" text-anchor="middle">End Ticks = 24</text>
+  <text x="235" y="104" text-anchor="middle">Start Ticks = 18</text>
+
+  <!-- 세 단계 -->
+  <rect x="60" y="130" width="351" height="50" fill="#F2F2F2" stroke="#555555"/>
+  <rect x="411" y="130" width="117" height="50" fill="#FFE0E0" stroke="#555555"/>
+  <rect x="528" y="130" width="312" height="50" fill="#F2F2F2" stroke="#555555"/>
+  <text x="235.5" y="160" text-anchor="middle" font-weight="bold">시전</text>
+  <text x="469.5" y="160" text-anchor="middle" font-weight="bold">판정</text>
+  <text x="684" y="160" text-anchor="middle" font-weight="bold">마무리</text>
+
+  <!-- 틱 눈금 -->
+  <text x="60" y="200" text-anchor="middle">0</text>
+  <text x="411" y="200" text-anchor="middle">18</text>
+  <text x="528" y="200" text-anchor="middle">24</text>
+  <text x="840" y="200" text-anchor="middle">40틱</text>
+
+  <text x="450" y="235" text-anchor="middle" fill="#555555">세 값 모두 공격을 시작한 때(0틱)부터 잰다. Duration Ticks는 판정 길이가 아니라 공격 전체 길이다.</text>
+</svg>

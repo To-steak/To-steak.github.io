@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">
+  <!--
+    로직과 화면의 호출 방향을 바꾸기 전과 후로 나란히 그린 그림이다. 좌표로 직접 그렸다.
+    왼쪽: 3월 버전. 로직이 공격을 시작하면 클립이 재생되고, 애니메이터 상태에 붙인 스크립트(SMB)가 진행률을 보다가 로직에 판정을 알린다.
+    오른쪽: 지금. 로직이 틱을 세어 판정하고 상태 데이터를 화면에 전달하면, 화면은 그에 맞는 애니메이션을 재생한다.
+    배치: 패널마다 위 상자가 로직, 아래 상자가 화면이다.
+  -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="300" fill="#FFFFFF"/>
+
+  <!-- 패널 -->
+  <rect x="20" y="10" width="420" height="280" rx="8" fill="#FAFAFA" stroke="#CCCCCC"/>
+  <rect x="460" y="10" width="420" height="280" rx="8" fill="#F3F7FF" stroke="#CCCCCC"/>
+  <text x="230" y="38" text-anchor="middle" font-size="14" font-weight="bold">이전: 서로를 부르는 구조</text>
+  <text x="670" y="38" text-anchor="middle" font-size="14" font-weight="bold">지금: 로직에서 화면으로 한 방향</text>
+
+  <!-- 선 -->
+  <g fill="none" stroke="#555555" stroke-width="1.2">
+    <!-- 왼쪽: 로직에서 화면으로(공격 시작), 화면에서 로직으로(판정 알림) -->
+    <path d="M200,120 V200" marker-end="url(#arrow)"/>
+    <path d="M260,200 V120" marker-end="url(#arrow)"/>
+    <!-- 오른쪽: 로직이 화면에 상태 데이터를 전달한다 -->
+    <path d="M670,120 V200" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- 왼쪽 상자 -->
+  <rect x="120" y="60" width="220" height="60" rx="6" fill="#FFFFFF" stroke="#555555"/>
+  <text x="230" y="85" text-anchor="middle" font-weight="bold">로직</text>
+  <text x="230" y="105" text-anchor="middle">공격 상태</text>
+  <rect x="120" y="200" width="220" height="60" rx="6" fill="#FFFFFF" stroke="#555555"/>
+  <text x="230" y="225" text-anchor="middle" font-weight="bold">화면</text>
+  <text x="230" y="245" text-anchor="middle">애니메이터 + 상태에 붙인 스크립트</text>
+
+  <!-- 왼쪽 화살표 설명 -->
+  <text x="190" y="156" text-anchor="end">공격을 시작하면</text>
+  <text x="190" y="174" text-anchor="end">클립 재생</text>
+  <text x="270" y="156">클립 14%에</text>
+  <text x="270" y="174">"지금 판정하라"</text>
+
+  <!-- 오른쪽 상자 -->
+  <rect x="560" y="60" width="220" height="60" rx="6" fill="#FFFFFF" stroke="#555555"/>
+  <text x="670" y="85" text-anchor="middle" font-weight="bold">로직</text>
+  <text x="670" y="105" text-anchor="middle">틱을 세어 판정, 상태 데이터</text>
+  <rect x="560" y="200" width="220" height="60" rx="6" fill="#FFFFFF" stroke="#555555"/>
+  <text x="670" y="225" text-anchor="middle" font-weight="bold">화면</text>
+  <text x="670" y="245" text-anchor="middle">상태에 맞는 애니메이션 재생</text>
+
+  <!-- 오른쪽 화살표 설명 -->
+  <text x="680" y="156">상태 데이터를</text>
+  <text x="680" y="174">전달한다</text>
+</svg>
