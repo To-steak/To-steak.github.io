@@ -6,6 +6,16 @@ outline: [2, 3]
 
 # TopView Game 포트폴리오
 
+![TopView Game 썸네일](/images/topview-game/Thumbnail-01.png)
+
+::: tip 프로젝트 정보
+탑-다운 액션 게임을 Claude Code로 개발해 완성한 개인 프로젝트입니다.
+
+- **GitHub 저장소**: <https://github.com/To-steak/TopView-Game>
+- **다운로드**: <https://github.com/To-steak/TopView-Game/releases>
+- **개발 기간**: 2026. 10. 30 ~ 2026. 11. 18 (**약 20일**)
+:::
+
 ## 개요
 
 ::: info 바로 가기
@@ -19,16 +29,6 @@ outline: [2, 3]
   로직과 화면을 분리하고, 엔티티-컴포넌트-시스템 구조로 재설계하는 내용입니다.
 
 전부 읽는 데 **약 10분**이 소요될 수 있습니다.
-:::
-
-![TopView Game 썸네일](/images/topview-game/Thumbnail-01.png)
-
-::: tip 프로젝트 정보
-탑-다운 액션 게임을 Claude Code로 개발해 완성한 개인 프로젝트입니다.
-
-- **GitHub 저장소**: <https://github.com/To-steak/TopView-Game>
-- **다운로드**: <https://github.com/To-steak/TopView-Game/releases>
-- **개발 기간**: 2026. 10. 30 ~ 2026. 11. 18 (**약 20일**)
 :::
 
 ### TopView Game 트레일러 영상
