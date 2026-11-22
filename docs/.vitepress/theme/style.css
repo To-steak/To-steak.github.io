@@ -40,3 +40,9 @@
   background-color: #2d353b;
   color: #ffcc00;
 }
+
+/* 사진 확대(medium-zoom): 상단 바보다 위에 띄운다 */
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 100;
+}
