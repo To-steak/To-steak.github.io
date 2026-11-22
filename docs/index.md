@@ -15,7 +15,7 @@ hero:
       link: /client/client_01
     - theme: alt
       text: MISC
-      link: /misc/NDC26_기술_면접은_무엇을_평가하는가
+      link: /misc/misc_01
 
 features:
   - icon: |
