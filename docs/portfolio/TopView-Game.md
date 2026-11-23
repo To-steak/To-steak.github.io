@@ -50,9 +50,9 @@ outline: [2, 3]
 
 시간이 지날수록 강해지는 적을 물리쳐 모은 골드로 캐릭터를 강화하며, 제한 시간 안에 보스를 쓰러뜨리는 탑-다운 액션 게임입니다.
 
-### 대학 과제에서 시작한 프로젝트
+### 첫 게임에서 시작한 프로젝트
 
-TopView Game은 2023년 대학교 과제로 유튜브 골드메탈님 강좌를 따라 만든 제 첫 게임입니다.
+TopView Game은 2023년에 유튜브 골드메탈님의 강좌를 보며 만든 제 첫 게임입니다.
 
 <LinkCard
   url="https://www.youtube.com/playlist?list=PLO-mt5Iu5TeYkrBzWKuTCl6IUm_bA6BKy"
@@ -63,7 +63,7 @@ TopView Game은 2023년 대학교 과제로 유튜브 골드메탈님 강좌를 
 
 ![2023년 버전 TopView Game](/images/topview-game/videoframe_128847.png)
 
-> 2023년도 대학교 과제로 제작한 TopView Game입니다.
+> 2023년에 처음 만든 TopView Game입니다.
 
 이번 프로젝트는 이 2023년 버전을 바탕으로 구조를 다시 짜고 기획을 다듬어 완성한 버전입니다.
 
