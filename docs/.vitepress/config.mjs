@@ -47,7 +47,11 @@ export default defineConfig({
         {
           text: 'Portfolio',
           items: [
-            { text: 'TopView Game', link: '/portfolio/TopView-Game' }
+            { text: 'TopView Game', link: '/portfolio/TopView-Game' },
+            { text: 'Project 02', link: '/portfolio/Project-02' },
+            { text: 'Project 05', link: '/portfolio/Project-05' },
+            { text: 'ECS 100k Projectile', link: '/portfolio/ECS-100k-Projectile' },
+            { text: 'Capstone Design', link: '/portfolio/Capstone-Design' }
           ]
         }
       ],
